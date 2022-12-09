@@ -1,0 +1,244 @@
+@charset "utf-8";
+/*
+   New Perspectives on HTML5, CSS3, and JavaScript 6th Edition
+   Tutorial 12
+   Case Problem 4
+
+   Gridirony Layout Style Sheet
+
+   Filename: gi_layout.css
+   
+*/
+
+/* HTML and Body Styles */
+
+html {
+  background: linear-gradient(to bottom, rgb(131, 218, 238), rgb(7, 88, 101));
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+}
+
+body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  background: white;
+  max-width: 1024px;
+  min-width: 420px;
+  margin: 20px auto;
+  border: 3px solid rgb(221, 221, 221);
+  box-shadow: 0px 0px 35px rgb(51, 51, 51);
+}
+
+/* Head Styles */
+
+body > header {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  background: rgb(16, 79, 123);
+}
+
+body > header > div {
+  -webkit-flex: 1 1 50px;
+  flex: 1 1 50px;
+}
+
+body > header > div > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+body > header > nav#middleTop {
+  width: 100%;
+}
+
+/* Left Right Top Navigation Styles */
+
+nav#leftTop,
+nav#rightTop {
+  -webkit-flex: 0 0 180px;
+  flex: 0 0 180px;
+  border: 1px solid black;
+}
+nav#leftTop > ul,
+nav#rightTop > ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  height: 100%;
+}
+
+nav#leftTop > ul > li,
+nav#rightTop > ul > li {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  background: rgb(16, 79, 123);
+  text-align: center;
+  font-size: 1.2em;
+  border: 2px inset rgb(51, 51, 51);
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-height: 40px;
+}
+
+nav#leftTop > ul li > a,
+nav#rightTop > ul li > a {
+  display: block;
+  color: rgb(231, 231, 231);
+}
+
+nav#leftTop > ul li > a:hover,
+nav#rightTop > ul li > a:hover {
+  color: rgb(255, 255, 121);
+}
+
+/* Top Navigation Styles */
+
+nav#middleTop ul {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: transparent;
+  height: 50px;
+  background-color: rgb(127, 15, 11);
+  border: 3px inset rgb(51, 51, 51);
+}
+
+nav#middleTop ul li {
+  -webkit-flex: 1 1 0px;
+  flex: 1 1 0px;
+  margin: 5px;
+}
+
+nav#middleTop ul li a {
+  color: rgb(231, 231, 231);
+  display: block;
+  font-size: 1.1em;
+  text-align: center;
+  padding: 50% 0%;
+}
+
+nav#middleTop ul li a:hover,
+nav#top ul li a:active {
+  color: rgb(255, 255, 121);
+}
+
+/* Left Navigation Styles */
+
+nav#left {
+  -webkit-flex: 0 0 180px;
+  flex: 0 0 180px;
+  border: 4px inset rgb(51, 51, 51);
+  background-color: rgb(4, 93, 5);
+  padding: 10px;
+}
+
+nav#left ul li {
+  line-height: 1.5em;
+  margin: 0px 0px 0px 8px;
+}
+
+nav#left ul li.newgroup {
+  margin-top: 15px;
+}
+
+nav#left ul li a {
+  color: rgb(255, 255, 231);
+}
+
+nav#left ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Section Styles */
+
+section#stats {
+  border: 4px inset rgb(51, 51, 51);
+  -webkit-flex: 1 1 5px;
+  flex: 1 1 5px;
+  background-color: rgb(179, 229, 180);
+  padding: 5px;
+}
+
+/* Table Styles */
+
+table {
+  margin: 30px auto 20px;
+  border-collapse: collapse;
+  font-size: 1em;
+  background-color: rgb(231, 231, 231);
+  color: rgb(91, 91, 91);
+}
+
+table caption {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  caption-side: top;
+  margin-bottom: 15px;
+  letter-spacing: 0.2em;
+  font-variant: small-caps;
+}
+
+th,
+td {
+  border: 1px solid rgb(121, 121, 121);
+  padding: 2px 5px;
+}
+
+table thead th {
+  vertical-align: center;
+  text-align: center;
+  height: 30px;
+  background-color: rgb(138, 204, 221);
+}
+
+table tbody tr:nth-of-type(even) td {
+  background-color: rgba(211, 211, 211, 0.7);
+}
+
+table tfoot {
+  background-color: rgb(138, 204, 221);
+}
+
+table tbody td {
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: right;
+}
+
+table tbody tr td:first-of-type,
+table tbody tr td:nth-of-type(2) {
+  text-align: left;
+}
+
+/* Footer Styles */
+
+footer {
+  width: 100%;
+  border: 4px inset rgb(51, 51, 51);
+}
+
+footer p {
+  color: rgb(211, 211, 211);
+  font-size: 0.9em;
+  text-align: center;
+  background-color: rgb(51, 51, 51);
+  margin: 0px;
+  padding: 10px 0px;
+}
